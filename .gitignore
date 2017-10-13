@@ -1,0 +1,12 @@
+# ignore directories
+node_modules
+src/.sass-cache
+src/calcs
+src/docs
+src/iconic
+src/php
+src/scss/.sass-cache
+src/css/style.css.map
+dist/iconic
+dist/imgs
+dist/php
