@@ -2,8 +2,10 @@
 .underline {
   display: inline-block;
   vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
   position: relative;
   overflow: hidden; }
 
@@ -16,9 +18,15 @@
   bottom: 0;
   background: #fff8dc;
   height: 1px;
+  -webkit-transition-property: left, right;
+  -o-transition-property: left, right;
   transition-property: left, right;
-  transition-duration: 250ms;
-  transition-timing-function: ease-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
 
 .underline:hover:before, .underline:focus:before, .underline:active:before {
   left: 0;
@@ -30,11 +38,43 @@ html, body {
   padding: 0; }
 
 hr {
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
   width: 10rem;
   background: transparent;
   border-bottom: 1px solid #fff8dc; }
 
 ol {
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
   padding-left: 1rem; }
 
 .nav-logo {
@@ -56,13 +96,20 @@ ol {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .nav-btn:focus {
   outline: 0; }
 
 .banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(255, 255, 255, 0.1))), url("../imgs/forest.jpg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
   min-height: 300px;
   background-attachment: fixed;
@@ -95,8 +142,12 @@ ol {
 
 .content-inverse a {
   color: #03b8ff;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   text-decoration: none; }
 
 .content-inverse a:hover {
@@ -108,8 +159,12 @@ ol {
   border: none;
   color: #fff8dc;
   cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: linear; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear; }
 
 .default-btn:hover {
   color: #ff033a; }
@@ -129,6 +184,22 @@ ol {
 
 .icons, .contact-icons {
   color: #ff033a;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
   font-size: 2.5rem; }
 
 .project-btn {
@@ -143,10 +214,30 @@ ol {
 .project-bg {
   height: auto;
   background-color: transparent;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
   padding: 0.75rem;
   opacity: 0.80;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .project-bg:hover {
   opacity: 1; }
@@ -157,11 +248,31 @@ ol {
   color: #fff8dc;
   border-top: 1px solid #03b8ff;
   border-bottom: 1px solid #03b8ff;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
   padding: 0.25rem; }
 
 .contact-icons {
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .contact-icons:hover {
   color: #03b8ff; }
@@ -176,7 +287,39 @@ ol {
 
 .invalid-info, .invalid-name, .invalid-email, .invalid-number, .invalid-message {
   display: none;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
+  margin-top: 4px;
   margin-top: .25rem;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
+  font-size: 11.2px;
   font-size: .7rem;
   color: #ff033a; }
 
@@ -190,8 +333,12 @@ ol {
   color: #fff8dc;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .contact-submit-button:hover {
   background-color: #fff8dc;
@@ -203,8 +350,12 @@ ol {
   color: #141516;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .modal-close-button:hover {
   color: #03b8ff; }
@@ -223,24 +374,108 @@ ol {
   color: #fff8dc; }
 
 .navbar-toggler {
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
   padding: 0.75rem;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
   font-size: 1rem;
   line-height: 1;
   background: 0 0;
   border: none;
   border-radius: 0;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
   margin-top: 0.1rem;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
   margin-bottom: 0.1rem; }
 
 .navbar-toggler-icon {
   color: #141516;
   height: 1.0em;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
   margin-right: 1rem; }
 
 .img-fluid {
   opacity: 0.80;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .img-fluid:hover {
   opacity: 1; }
@@ -270,5 +505,4 @@ ol {
 
 .close:focus {
   outline: 0; }
-
 /*# sourceMappingURL=style.css.map */

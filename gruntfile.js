@@ -12,21 +12,9 @@ module.exports = function(grunt) {
             },
 
         build: ['Gruntfile.js', 'src/**/*.js']
-        },
+    },
 
-        // Configure uglify to minify js files
-        uglify: {
-            options: {
-                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("mm-dd-yyyy") %> \n*/\n'
-            },
-        build: {
-            // Specify which files to minify
-            files: {
-                // Minify all js files into one js file
-                'dist/js/scripts.min.js': ['src/**/*.js']
-            }
-        }
-        },
+
 
         // Configure cssmin to minify css files
         cssmin: {
@@ -77,14 +65,15 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    /*grunt.loadNpmTasks('grunt-contrib-uglify');*/
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-postcss');
 
 
+
     // Create tasks to run multiple tasks
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'postcss', 'htmlmin']);
+    grunt.registerTask('default', ['jshint', 'cssmin', 'postcss', 'htmlmin']);
 
 };
 
