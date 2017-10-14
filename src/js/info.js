@@ -16,8 +16,8 @@ fetch(endpoint).then(function(blob) {       // first promise that is returned fr
 function blah() {
     info.filter(function(char){
         if(char.character.class == 4) {
-            console.log(char.character);
-            list = textContent(char.character.class);
+            console.log(char.character.name);
+            list.textContent = char.character.name;
         }
     });
 }
