@@ -12,42 +12,19 @@ fetch(endpoint).then(function(blob) {       // first promise that is returned fr
     });
 });
 
+var names = [];
 
-function blah() {
-    info.filter(function(char){
+
+function test () {
+    info.filter(function(char) {
         if(char.character.class == 4) {
-            console.log(char.character.name);
-            list.textContent = char.character.name;
+            names.push(char.character.name + "<br>");
+            list.innerHTML = names.join('');
+            list.style.color = "yellow";
         }
     });
 }
 
-btn.addEventListener("click", blah, false);
 
+btn.addEventListener("click", test, false);
 
-/*
-==========================================
-MY CODE THAT I TESTED BELOW WORKS
-==========================================
-
-crayons = [
-    {color: 'red', type: 'warm'},
-    {color: 'blue', type: 'cool'},
-    {color: 'orange', type: 'warm'},
-    {color: 'yellow', type: 'warm'},
-    {color: 'black', type: 'neutral'},
-    {color: 'white', type: 'neutral'}
-]
-
-const coloring = crayons.map(function(fun){
-    return fun.type;
-
-})
-
-const test = coloring.filter(function(eh) {
-    if(eh == 'warm') {
-        return true;
-    }
-});
-
-*/
