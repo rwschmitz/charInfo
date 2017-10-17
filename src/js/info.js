@@ -49,11 +49,18 @@ var shamans = [];
 var warlocks = [];
 var warriors = [];
 
-// check to see if array is empty
+/*
+
+1. Check which class to filter.
+2. If expected class && value is not already in array, push to array.
+3. Else, throw the value away.
+4. Continue looping.
+
+*/
 
 function deathknight () {
     info.filter(function(char) {
-        if(char.character.class == 6) { // deathknights
+        if(char.character.class == 6 && !deathknights.includes(char.character.name + "<br>")) { // deathknights
             deathknights.push(char.character.name + "<br>");
             listDeathknight.innerHTML = deathknights.join('');
             listDeathknight.style.color = '#c41f3b';
@@ -63,7 +70,7 @@ function deathknight () {
 
 function demonhunter () {
     info.filter(function(char) {
-        if(char.character.class == 12) { // demonhunters
+        if(char.character.class == 12 && !demonhunters.includes(char.character.name + "<br>")) { // demonhunters
             demonhunters.push(char.character.name + "<br>");
             listDemonhunter.innerHTML = demonhunters.join('');
             listDemonhunter.style.color = '#a330c9';
@@ -73,7 +80,7 @@ function demonhunter () {
 
 function druid () {
     info.filter(function(char) {
-        if(char.character.class == 11) { // druids
+        if(char.character.class == 11 && !druids.includes(char.character.name + "<br>")) { // druids
             druids.push(char.character.name + "<br>");
             listDruid.innerHTML = druids.join('');
             listDruid.style.color = '#ff7d0a';
@@ -83,7 +90,7 @@ function druid () {
 
 function hunter () {
     info.filter(function(char) {
-        if(char.character.class == 3) { // hunters
+        if(char.character.class == 3 && !hunters.includes(char.character.name + "<br>")) { // hunters
             hunters.push(char.character.name + "<br>");
             listHunter.innerHTML = hunters.join('');
             listHunter.style.color = '#abd473';
@@ -93,7 +100,7 @@ function hunter () {
 
 function mage () {
     info.filter(function(char) {
-        if(char.character.class == 8) { // mages
+        if(char.character.class == 8 && !mages.includes(char.character.name + "<br>")) { // mages
             mages.push(char.character.name + "<br>");
             listMage.innerHTML = mages.join('');
             listMage.style.color = '#69ccf0';
@@ -103,7 +110,7 @@ function mage () {
 
 function monk () {
     info.filter(function(char) {
-        if(char.character.class == 10) { // monks
+        if(char.character.class == 10 && !monks.includes(char.character.name + "<br>")) { // monks
             monks.push(char.character.name + "<br>");
             listMonk.innerHTML = monks.join('');
             listMonk.style.color = '#00ff96';
@@ -113,7 +120,7 @@ function monk () {
 
 function paladin () {
     info.filter(function(char) {
-        if(char.character.class == 2) { // paladins
+        if(char.character.class == 2 && !paladins.includes(char.character.name + "<br>")) { // paladins
             paladins.push(char.character.name + "<br>");
             listPaladin.innerHTML = paladins.join('');
             listPaladin.style.color = '#f58cba';
@@ -123,7 +130,7 @@ function paladin () {
 
 function priest () {
     info.filter(function(char) {
-        if(char.character.class == 5) { // priests
+        if(char.character.class == 5 && !priests.includes(char.character.name + "<br>")) { // priests
             priests.push(char.character.name + "<br>");
             listPriest.innerHTML = priests.join('');
             listPriest.style.color = '#ffffff';
@@ -133,7 +140,7 @@ function priest () {
 
 function rogue () {
     info.filter(function(char) {
-        if(char.character.class == 4) { // rogues
+        if(char.character.class == 4 && !rogues.includes(char.character.name + "<br>")) { // rogues
             rogues.push(char.character.name + "<br>");
             listRogue.innerHTML = rogues.join('');
             listRogue.style.color = '#fff569';
@@ -143,7 +150,7 @@ function rogue () {
 
 function shaman () {
     info.filter(function(char) {
-        if(char.character.class == 7) { // shamans
+        if(char.character.class == 7 && !shamans.includes(char.character.name + "<br>")) { // shamans
             shamans.push(char.character.name + "<br>");
             listShaman.innerHTML = shamans.join('');
             listShaman.style.color = '#0070d3';
@@ -153,7 +160,7 @@ function shaman () {
 
 function warlock () {
     info.filter(function(char) {
-        if(char.character.class == 9) { // warlocks
+        if(char.character.class == 9 && !warlocks.includes(char.character.name + "<br>")) { // warlocks
             warlocks.push(char.character.name + "<br>");
             listWarlock.innerHTML = warlocks.join('');
             listWarlock.style.color = '#9482c9';
@@ -161,15 +168,20 @@ function warlock () {
     });
 }
 
+
+
 function warrior () {
     info.filter(function(char) {
-        if(char.character.class == 1) { // warriors
+        if(char.character.class == 1 && !warriors.includes(char.character.name + "<br>")) { // warriors
             warriors.push(char.character.name + "<br>");
             listWarrior.innerHTML = warriors.join('');
             listWarrior.style.color = '#c79c63';
         }
     });
+    console.log(warriors);
 }
+
+// char.character.name != warriors[0]) { // warriors
 
 
 btnDeathknight.addEventListener("click", deathknight, false);
@@ -184,4 +196,5 @@ btnRogue.addEventListener("click", rogue, false);
 btnShaman.addEventListener("click", shaman, false);
 btnWarlock.addEventListener("click", warlock, false);
 btnWarrior.addEventListener("click", warrior, false);
+
 
