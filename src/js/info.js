@@ -58,113 +58,192 @@ var warriors = [];
 
 */
 
+
 function deathknight () {
     info.filter(function(char) {
-        if(char.character.class == 6 && !deathknights.includes(char.character.name + "<br>")) { // deathknights
-            deathknights.push(char.character.name + "<br>");
-            listDeathknight.innerHTML = deathknights.join('');
-            listDeathknight.style.color = '#c41f3b';
+        if(char.character.class == 6 && !deathknights.includes(char.character.name)) { // deathknights
+            deathknights.push(char.character.name);
         }
+        deathknights.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listDeathknight.innerHTML = deathknights.join(', ');
+        listDeathknight.style.color = '#c41f3b';
     });
 }
 
+
 function demonhunter () {
     info.filter(function(char) {
-        if(char.character.class == 12 && !demonhunters.includes(char.character.name + "<br>")) { // demonhunters
-            demonhunters.push(char.character.name + "<br>");
-            listDemonhunter.innerHTML = demonhunters.join('');
-            listDemonhunter.style.color = '#a330c9';
+        if(char.character.class == 12 && !demonhunters.includes(char.character.name)) { // demonhunters
+            demonhunters.push(char.character.name);
         }
+        demonhunters.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listDemonhunter.innerHTML = demonhunters.join(', ');
+        listDemonhunter.style.color = '#a330c9';
     });
 }
 
 function druid () {
     info.filter(function(char) {
-        if(char.character.class == 11 && !druids.includes(char.character.name + "<br>")) { // druids
-            druids.push(char.character.name + "<br>");
-            listDruid.innerHTML = druids.join('');
-            listDruid.style.color = '#ff7d0a';
+        if(char.character.class == 11 && !druids.includes(char.character.name)) { // druids
+            druids.push(char.character.name);
         }
+        druids.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listDruid.innerHTML = druids.join(', ');
+        listDruid.style.color = '#ff7d0a';
     });
 }
 
 function hunter () {
     info.filter(function(char) {
-        if(char.character.class == 3 && !hunters.includes(char.character.name + "<br>")) { // hunters
-            hunters.push(char.character.name + "<br>");
-            listHunter.innerHTML = hunters.join('');
-            listHunter.style.color = '#abd473';
+        if(char.character.class == 3 && !hunters.includes(char.character.name)) { // hunters
+            hunters.push(char.character.name);
         }
+        hunters.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listHunter.innerHTML = hunters.join(', ');
+        listHunter.style.color = '#abd473';
     });
 }
 
 function mage () {
     info.filter(function(char) {
-        if(char.character.class == 8 && !mages.includes(char.character.name + "<br>")) { // mages
-            mages.push(char.character.name + "<br>");
-            listMage.innerHTML = mages.join('');
-            listMage.style.color = '#69ccf0';
+        if(char.character.class == 8 && !mages.includes(char.character.name)) { // mages
+            mages.push(char.character.name);
         }
+        mages.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listMage.innerHTML = mages.join(', ');
+        listMage.style.color = '#69ccf0';
     });
 }
 
 function monk () {
     info.filter(function(char) {
-        if(char.character.class == 10 && !monks.includes(char.character.name + "<br>")) { // monks
-            monks.push(char.character.name + "<br>");
-            listMonk.innerHTML = monks.join('');
-            listMonk.style.color = '#00ff96';
+        if(char.character.class == 10 && !monks.includes(char.character.name)) { // monks
+            monks.push(char.character.name);
         }
+        monks.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listMonk.innerHTML = monks.join(', ');
+        listMonk.style.color = '#00ff96';
     });
 }
 
 function paladin () {
     info.filter(function(char) {
-        if(char.character.class == 2 && !paladins.includes(char.character.name + "<br>")) { // paladins
-            paladins.push(char.character.name + "<br>");
-            listPaladin.innerHTML = paladins.join('');
-            listPaladin.style.color = '#f58cba';
+        if(char.character.class == 2 && !paladins.includes(char.character.name)) { // paladins
+            paladins.push(char.character.name);
         }
+        paladins.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listPaladin.innerHTML = paladins.join(', ');
+        listPaladin.style.color = '#f58cba';
     });
 }
 
 function priest () {
     info.filter(function(char) {
-        if(char.character.class == 5 && !priests.includes(char.character.name + "<br>")) { // priests
-            priests.push(char.character.name + "<br>");
-            listPriest.innerHTML = priests.join('');
-            listPriest.style.color = '#ffffff';
+        if(char.character.class == 5 && !priests.includes(char.character.name)) { // priests
+            priests.push(char.character.name);
         }
+        priests.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listPriest.innerHTML = priests.join(', ');
+        listPriest.style.color = '#ffffff';
     });
 }
 
 function rogue () {
     info.filter(function(char) {
-        if(char.character.class == 4 && !rogues.includes(char.character.name + "<br>")) { // rogues
-            rogues.push(char.character.name + "<br>");
-            listRogue.innerHTML = rogues.join('');
-            listRogue.style.color = '#fff569';
+        if(char.character.class == 4 && !rogues.includes(char.character.name)) { // rogues
+            rogues.push(char.character.name);
         }
+        rogues.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listRogue.innerHTML = rogues.join(', ');
+        listRogue.style.color = '#fff569';
     });
 }
 
 function shaman () {
     info.filter(function(char) {
-        if(char.character.class == 7 && !shamans.includes(char.character.name + "<br>")) { // shamans
-            shamans.push(char.character.name + "<br>");
-            listShaman.innerHTML = shamans.join('');
-            listShaman.style.color = '#0070d3';
+        if(char.character.class == 7 && !shamans.includes(char.character.name)) { // shamans
+            shamans.push(char.character.name);
         }
+        shamans.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listShaman.innerHTML = shamans.join(', ');
+        listShaman.style.color = '#0070d3';
     });
 }
 
 function warlock () {
     info.filter(function(char) {
-        if(char.character.class == 9 && !warlocks.includes(char.character.name + "<br>")) { // warlocks
-            warlocks.push(char.character.name + "<br>");
-            listWarlock.innerHTML = warlocks.join('');
-            listWarlock.style.color = '#9482c9';
+        if(char.character.class == 9 && !warlocks.includes(char.character.name)) { // warlocks
+            warlocks.push(char.character.name);
         }
+        warlocks.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listWarlock.innerHTML = warlocks.join(', ');
+        listWarlock.style.color = '#9482c9';
     });
 }
 
@@ -172,16 +251,20 @@ function warlock () {
 
 function warrior () {
     info.filter(function(char) {
-        if(char.character.class == 1 && !warriors.includes(char.character.name + "<br>")) { // warriors
-            warriors.push(char.character.name + "<br>");
-            listWarrior.innerHTML = warriors.join('');
-            listWarrior.style.color = '#c79c63';
+        if(char.character.class == 1 && !warriors.includes(char.character.name)) { // warriors
+            warriors.push(char.character.name);
         }
+        warriors.sort(function(a,b) {
+            if(a > b) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        listWarrior.innerHTML = warriors.join(', ');
+        listWarrior.style.color = '#c79c63';
     });
-    console.log(warriors);
 }
-
-// char.character.name != warriors[0]) { // warriors
 
 
 btnDeathknight.addEventListener("click", deathknight, false);

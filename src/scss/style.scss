@@ -128,19 +128,6 @@
         color: $white;
     }
 
-    .content-inverse {
-        font-family: $content-font;
-        font-size: $content-font-size;
-        color: $black;
-    }
-
-    .content-inverse a {
-        color: $blue;
-        transition-duration: $hover-time;
-        transition-timing-function: ease-in-out;
-        text-decoration: none;
-    }
-
     .content-inverse a:hover {
         font-weight: 700;
         color: $black;
@@ -148,19 +135,172 @@
 
     .default-btn {
         background: transparent;
-        border: none;
-        color: $white;
+        border-top: none;
+        border-bottom: 1px solid $white;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
         cursor: pointer;
         transition-duration: $hover-time;
         transition-timing-function: linear;
+        width: 9rem;
+        padding: 0.25rem;
     }
 
+    /*
     .default-btn:hover {
-        color: $red;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+        width: 8rem;
     }
+    */
 
     .default-btn:focus {
         outline: 0;
+    }
+
+    .deathknight-btn {
+        @extend .default-btn;
+        color: $deathknight;
+    }
+
+    .deathknight-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $deathknight;
+        border-right: 1px solid $deathknight;
+        width: 8rem;
+    }
+
+    .demonhunter-btn {
+        @extend .default-btn;
+        color: $demonhunter;
+    }
+
+    .demonhunter-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $demonhunter;
+        border-right: 1px solid $demonhunter;
+        width: 8rem;
+    }
+
+    .druid-btn {
+        @extend .default-btn;
+        color: $druid;
+    }
+
+    .druid-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $druid;
+        border-right: 1px solid $druid;
+        width: 8rem;
+    }
+
+    .hunter-btn {
+        @extend .default-btn;
+        color: $hunter;
+    }
+
+    .hunter-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $hunter;
+        border-right: 1px solid $hunter;
+        width: 8rem;
+    }
+
+    .mage-btn {
+        @extend .default-btn;
+        color: $mage;
+    }
+
+    .mage-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $mage;
+        border-right: 1px solid $mage;
+        width: 8rem;
+    }
+
+    .monk-btn {
+        @extend .default-btn;
+        color:  $monk;
+    }
+
+    .monk-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $monk;
+        border-right: 1px solid $monk;
+        width: 8rem;
+    }
+
+    .paladin-btn {
+        @extend .default-btn;
+        color: $paladin;
+    }
+
+    .paladin-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $paladin;
+        border-right: 1px solid $paladin;
+        width: 8rem;
+    }
+
+    .priest-btn {
+        @extend .default-btn;
+        color: $priest;
+    }
+
+    .priest-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $priest;
+        border-right: 1px solid $priest;
+        width: 8rem;
+    }
+
+    .rogue-btn {
+        @extend .default-btn;
+        color: $rogue;
+    }
+
+    .rogue-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $rogue;
+        border-right: 1px solid $rogue;
+        width: 8rem;
+    }
+
+    .shaman-btn {
+        @extend .default-btn;
+        color: $shaman;
+    }
+
+    .shaman-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $shaman;
+        border-right: 1px solid $shaman;
+        width: 8rem;
+    }
+
+    .warlock-btn {
+        @extend .default-btn;
+        color: $warlock;
+    }
+
+    .warlock-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $warlock;
+        border-right: 1px solid $warlock;
+        width: 8rem;
+    }
+
+    .warrior-btn {
+        @extend .default-btn;
+        color: $warrior;
+    }
+
+    .warrior-btn:hover {
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid $warrior;
+        border-right: 1px solid $warrior;
+        width: 8rem;
     }
 
     .intro {
@@ -180,117 +320,8 @@
         font-size: $icons-size;
     }
 
-    .project-btn {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-    }
 
-    .project-btn:focus {
-        outline: 0;
-    }
-
-     .project-bg {
-        height: auto;
-        background-color: transparent;
-        padding: 0.75rem;
-        opacity: 0.80;
-        transition-duration: $hover-time;
-        transition-timing-function: ease-in-out;
-     }
-
-     .project-bg:hover {
-        opacity: 1;
-     }
-
-     .project-name {
-        font-family: $project-font;
-        font-size: $project-font-size;
-        color: $white;
-        border-top: 1px solid $blue;
-        border-bottom: 1px solid $blue;
-        padding: 0.25rem;
-     }
-
-    .contact-icons {
-        @extend .icons;
-        transition-duration: $hover-time;
-        transition-timing-function: ease-in-out;
-    }
-
-    .contact-icons:hover {
-        color: $blue;
-    }
-
-    .default-border {
-        display: block;
-        border: 1px solid $blue;
-    }
-          
-    .valid-border {
-        display: block;
-        border: 1px solid $blue; 
-    }
-    
-    .invalid-info, .invalid-name, .invalid-email, .invalid-number, .invalid-message {
-        display: none;
-        margin-top: .25rem;
-        font-size: .7rem;
-        color: $red;
-    }
-
-    .invalid-border {
-        display: block;
-        border: 1px solid $red; 
-    }
-
-    .contact-submit-button {
-        border: none;
-        background-color: $blue;
-        color: $white;
-        border-radius: 0.25rem;
-        cursor: pointer;
-        transition-duration: $hover-time;
-        transition-timing-function: ease-in-out;
-    }
-
-    .contact-submit-button:hover {
-        background-color: $white;
-        color: $blue;
-    }
-
-    .modal-close-button {
-        border: none;
-        background-color: $white;
-        color: $black;
-        border-radius: 0.25rem;
-        cursor: pointer;
-        transition-duration: $hover-time;
-        transition-timing-function: ease-in-out;
-    }
-
-    .modal-close-button:hover {
-        color: $blue;
-    }
-    
-    .copyright {
-        font-family: $copyright-font;
-        font-size: $copyright-font-size;
-        color: $white;
-    }
-    
     // Mobile only
-
-    .mobile-home-icons {
-        font-size: $mobile-icon-size;
-        color: $red;
-    }
-
-    .mobile-home-content {
-        font-size: $content-font-size;
-        color: $white;
-    }
     
     // Desktop only
 
