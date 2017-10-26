@@ -146,18 +146,14 @@
         padding: 0.25rem;
     }
 
-    /*
-    .default-btn:hover {
-        border-bottom: 1px solid transparent;
-        border-left: 1px solid $white;
-        border-right: 1px solid $white;
-        width: 8rem;
+    .wowClass {
+        @extend .content;
     }
-    */
 
-    .default-btn:focus {
-        outline: 0;
+    .wowClassRoster {
+        @extend .content;
     }
+
 
     .deathknight-btn {
         @extend .default-btn;

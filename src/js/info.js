@@ -1,30 +1,24 @@
+/* 
+
+Warrior = 0
+Paladin = 1
+Hunter = 2
+Rogue = 3
+Priest = 4
+DeathKnight = 5
+Shaman = 6
+Mage = 7
+Warlock = 8
+Monk = 9
+Druid = 10
+Demon Hunter = 11
+
+*/
+
 const endpoint = 'https://us.api.battle.net/wow/guild/Mal\'Ganis/step%20dad?fields=members&locale=en_US&apikey=c6ksxd9aqueqjtt3m4kxfkgett9k44m2';
 
-var btnDeathknight = document.getElementById("btnDeathknight");
-var btnDemonhunter = document.getElementById("btnDemonhunter");
-var btnDruid = document.getElementById("btnDruid");
-var btnHunter = document.getElementById("btnHunter");
-var btnMage = document.getElementById("btnMage");
-var btnMonk = document.getElementById("btnMonk");
-var btnPaladin = document.getElementById("btnPaladin");
-var btnPriest = document.getElementById("btnPriest");
-var btnRogue = document.getElementById("btnRogue");
-var btnShaman = document.getElementById("btnShaman");
-var btnWarlock = document.getElementById("btnWarlock");
-var btnWarrior = document.getElementById("btnWarrior");
-
-var listDeathknight = document.getElementById("updateDeathknight");
-var listDemonhunter = document.getElementById("updateDemonhunter");
-var listDruid = document.getElementById("updateDruid");
-var listHunter = document.getElementById("updateHunter");
-var listMage = document.getElementById("updateMage");
-var listMonk = document.getElementById("updateMonk");
-var listPaladin = document.getElementById("updatePaladin");
-var listPriest = document.getElementById("updatePriest");
-var listRogue = document.getElementById("updateRogue");
-var listShaman = document.getElementById("updateShaman");
-var listWarlock = document.getElementById("updateWarlock");
-var listWarrior = document.getElementById("updateWarrior");
+var wowClasses = document.getElementsByClassName("wowClass");
+var wowClassesRoster = document.getElementsByClassName("wowClassRoster");
 
 var info = [];
 
@@ -36,248 +30,244 @@ fetch(endpoint).then(function(blob) {       // first promise that is returned fr
     });
 });
 
-var deathknights = [];
-var demonhunters = [];
-var druids = [];
-var hunters = [];
-var mages = [];
-var monks = [];
-var paladins = [];
-var priests = [];
-var rogues = [];
-var shamans = [];
-var warlocks = [];
-var warriors = [];
-
-/*
-
-1. Check which class to filter.
-2. If expected class && value is not already in array, push to array.
-3. Else, throw the value away.
-4. Continue looping.
-
-*/
+var wowClassesArr = [
+    [], // warriors
+    [], // paladins
+    [], // hunters
+    [], // rogues
+    [], // priests
+    [], // deathknights
+    [], // shamans
+    [], // mages
+    [], // warlocks
+    [], // monks
+    [], // druids
+    [] // demonhunters
+];
 
 
-function deathknight () {
-    info.filter(function(char) {
-        if(char.character.class == 6 && !deathknights.includes(char.character.name)) { // deathknights
-            deathknights.push(char.character.name);
+function assignClass(e) {
+    var target = e.target;
+
+    for (var i = 0; i < 12; i++) {
+        if(e.target === wowClasses[i]) {
+            wowObj[i]();
         }
-        deathknights.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
-        listDeathknight.innerHTML = deathknights.join(', ');
-        listDeathknight.style.color = '#c41f3b';
-    });
+    }
 }
 
+for ( var i = 0; i < wowClasses.length; i++) {
+    wowClasses[i].addEventListener("click", assignClass, false);
+} 
 
-function demonhunter () {
-    info.filter(function(char) {
-        if(char.character.class == 12 && !demonhunters.includes(char.character.name)) { // demonhunters
-            demonhunters.push(char.character.name);
-        }
-        demonhunters.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+
+
+/* var wowObj = [
+
+ 
+    function () {
+        info.filter(function(char) {
+            if(char.character.class === 1 && !wowClassesArr[0].includes(char.character.name)) { // deathknights
+                wowClassesArr[0].push(char.character.name);
             }
+            wowClassesArr[0].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[0].innerHTML = wowClassesArr[0].join(', ');
+            wowClassesRoster[0].style.color = '#c41f3b';
         });
-        listDemonhunter.innerHTML = demonhunters.join(', ');
-        listDemonhunter.style.color = '#a330c9';
-    });
-}
+    },
 
-function druid () {
-    info.filter(function(char) {
-        if(char.character.class == 11 && !druids.includes(char.character.name)) { // druids
-            druids.push(char.character.name);
-        }
-        druids.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function () {
+        info.filter(function(char) {
+            if(char.character.class === 2 && !wowClassesArr[1].includes(char.character.name)) { // deathknights
+                wowClassesArr[1].push(char.character.name);
             }
+            wowClassesArr[1].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[1].innerHTML = wowClassesArr[1].join(', ');
+            wowClassesRoster[1].style.color = '#c41f3b';
         });
-        listDruid.innerHTML = druids.join(', ');
-        listDruid.style.color = '#ff7d0a';
-    });
-}
+    },
 
-function hunter () {
-    info.filter(function(char) {
-        if(char.character.class == 3 && !hunters.includes(char.character.name)) { // hunters
-            hunters.push(char.character.name);
-        }
-        hunters.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+
+     function() {
+        info.filter(function(char) {
+            if(char.character.class == 3 && !wowClassesArr[2].includes(char.character.name)) { // hunters
+                wowClassesArr[2].push(char.character.name);
             }
+            wowClassesArr[2].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[2].innerHTML = wowClassesArr[2].join(', ');
+            wowClassesRoster[2].style.color = '#abd473';
         });
-        listHunter.innerHTML = hunters.join(', ');
-        listHunter.style.color = '#abd473';
-    });
-}
+    },
 
-function mage () {
-    info.filter(function(char) {
-        if(char.character.class == 8 && !mages.includes(char.character.name)) { // mages
-            mages.push(char.character.name);
-        }
-        mages.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+ 
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 4 && !wowClassesArr[3].includes(char.character.name)) { // rogues
+                wowClassesArr[3].push(char.character.name);
             }
+            wowClassesArr[3].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[3].innerHTML = wowClassesArr[3].join(', ');
+            wowClassesRoster[3].style.color = '#fff569';
         });
-        listMage.innerHTML = mages.join(', ');
-        listMage.style.color = '#69ccf0';
-    });
-}
+    },
 
-function monk () {
-    info.filter(function(char) {
-        if(char.character.class == 10 && !monks.includes(char.character.name)) { // monks
-            monks.push(char.character.name);
-        }
-        monks.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 5 && !wowClassesArr[4].includes(char.character.name)) { // priests
+                wowClassesArr[4].push(char.character.name);
             }
+            wowClassesArr[4].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[4].innerHTML = wowClassesArr[4].join(', ');
+            wowClassesRoster[4].style.color = '#ffffff';
         });
-        listMonk.innerHTML = monks.join(', ');
-        listMonk.style.color = '#00ff96';
-    });
-}
+    },
 
-function paladin () {
-    info.filter(function(char) {
-        if(char.character.class == 2 && !paladins.includes(char.character.name)) { // paladins
-            paladins.push(char.character.name);
-        }
-        paladins.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 6 && !wowClassesArr[5].includes(char.character.name)) { // deathknights
+                wowClassesArr[5].push(char.character.name);
             }
+            wowClassesArr[5].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[5].innerHTML = wowClassesArr[5].join(', ');
+            wowClassesRoster[5].style.color = '#c41f3b';
         });
-        listPaladin.innerHTML = paladins.join(', ');
-        listPaladin.style.color = '#f58cba';
-    });
-}
+    },
 
-function priest () {
-    info.filter(function(char) {
-        if(char.character.class == 5 && !priests.includes(char.character.name)) { // priests
-            priests.push(char.character.name);
-        }
-        priests.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 7 && !wowClassesArr[6].includes(char.character.name)) { // shamans
+                wowClassesArr[6].push(char.character.name);
             }
+            wowClassesArr[6].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[6].innerHTML = wowClassesArr[6].join(', ');
+            wowClassesRoster[6].style.color = '#0070d3';
         });
-        listPriest.innerHTML = priests.join(', ');
-        listPriest.style.color = '#ffffff';
-    });
-}
+    },
 
-function rogue () {
-    info.filter(function(char) {
-        if(char.character.class == 4 && !rogues.includes(char.character.name)) { // rogues
-            rogues.push(char.character.name);
-        }
-        rogues.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 8 && !wowClassesArr[7].includes(char.character.name)) { // mages
+                wowClassesArr[7].push(char.character.name);
             }
+            wowClassesArr[7].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[7].innerHTML = wowClassesArr[7].join(', ');
+            wowClassesRoster[7].style.color = '#69ccf0';
         });
-        listRogue.innerHTML = rogues.join(', ');
-        listRogue.style.color = '#fff569';
-    });
-}
+    },
 
-function shaman () {
-    info.filter(function(char) {
-        if(char.character.class == 7 && !shamans.includes(char.character.name)) { // shamans
-            shamans.push(char.character.name);
-        }
-        shamans.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 9 && !wowClassesArr[8].includes(char.character.name)) { // warlocks
+                wowClassesArr[8].push(char.character.name);
             }
+            wowClassesArr[8].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[8].innerHTML = wowClassesArr[8].join(', ');
+            wowClassesRoster[8].style.color = '#9482c9';
         });
-        listShaman.innerHTML = shamans.join(', ');
-        listShaman.style.color = '#0070d3';
-    });
-}
+    },
 
-function warlock () {
-    info.filter(function(char) {
-        if(char.character.class == 9 && !warlocks.includes(char.character.name)) { // warlocks
-            warlocks.push(char.character.name);
-        }
-        warlocks.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 10 && !wowClassesArr[9].includes(char.character.name)) { // monks
+                wowClassesArr[9].push(char.character.name);
             }
+            wowClassesArr[9].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[9].innerHTML = wowClassesArr[9].join(', ');
+            wowClassesRoster[9].style.color = '#00ff96';
         });
-        listWarlock.innerHTML = warlocks.join(', ');
-        listWarlock.style.color = '#9482c9';
-    });
-}
+    },
 
-
-
-function warrior () {
-    info.filter(function(char) {
-        if(char.character.class == 1 && !warriors.includes(char.character.name)) { // warriors
-            warriors.push(char.character.name);
-        }
-        warriors.sort(function(a,b) {
-            if(a > b) {
-                return 1;
-            } else {
-                return -1;
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 11 && !wowClassesArr[10].includes(char.character.name)) { // druids
+                wowClassesArr[10].push(char.character.name);
             }
+            wowClassesArr[10].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[10].innerHTML = wowClassesArr[10].join(', ');
+            wowClassesRoster[10].style.color = '#ff7d0a';
         });
-        listWarrior.innerHTML = warriors.join(', ');
-        listWarrior.style.color = '#c79c63';
-    });
-}
+    },
 
-
-btnDeathknight.addEventListener("click", deathknight, false);
-btnDemonhunter.addEventListener("click", demonhunter, false);
-btnDruid.addEventListener("click", druid, false);
-btnHunter.addEventListener("click", hunter, false);
-btnMage.addEventListener("click", mage, false);
-btnMonk.addEventListener("click", monk, false);
-btnPaladin.addEventListener("click", paladin, false);
-btnPriest.addEventListener("click", priest, false);
-btnRogue.addEventListener("click", rogue, false);
-btnShaman.addEventListener("click", shaman, false);
-btnWarlock.addEventListener("click", warlock, false);
-btnWarrior.addEventListener("click", warrior, false);
-
-
+    function() {
+        info.filter(function(char) {
+            if(char.character.class == 12 && !wowClassesArr[11].includes(char.character.name)) { // demonhunters
+                wowClassesArr[11].push(char.character.name);
+            }
+            wowClassesArr[11].sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            wowClassesRoster[11].innerHTML = wowClassesArr[11].join(', ');
+            wowClassesRoster[11].style.color = '#a330c9';
+        });
+    }
+]; */

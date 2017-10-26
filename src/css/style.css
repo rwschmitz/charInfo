@@ -2,8 +2,10 @@
 .underline {
   display: inline-block;
   vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
   position: relative;
   overflow: hidden; }
 
@@ -16,9 +18,15 @@
   bottom: 0;
   background: #fff8dc;
   height: 1px;
+  -webkit-transition-property: left, right;
+  -o-transition-property: left, right;
   transition-property: left, right;
-  transition-duration: 250ms;
-  transition-timing-function: ease-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
 
 .underline:hover:before, .underline:focus:before, .underline:active:before {
   left: 0;
@@ -30,11 +38,23 @@ html, body {
   padding: 0; }
 
 hr {
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
+  width: 160px;
   width: 10rem;
   background: transparent;
   border-bottom: 1px solid #fff8dc; }
 
 ol {
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
+  padding-left: 16px;
   padding-left: 1rem; }
 
 .nav-logo {
@@ -56,13 +76,20 @@ ol {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .nav-btn:focus {
   outline: 0; }
 
 .banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(255, 255, 255, 0.1))), url("../imgs/forest.jpg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.1)), url("../imgs/forest.jpg");
   min-height: 300px;
   background-attachment: fixed;
@@ -83,7 +110,7 @@ ol {
   font-size: 20px;
   color: #ff033a; }
 
-.content {
+.content, .wowClass, .wowClassRoster {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #fff8dc; }
@@ -99,21 +126,26 @@ ol {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  width: 144px;
+  width: 144px;
+  width: 144px;
+  width: 144px;
+  width: 144px;
+  width: 144px;
   width: 9rem;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
+  padding: 4px;
   padding: 0.25rem; }
-
-/*
-.default-btn:hover {
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid $white;
-    border-right: 1px solid $white;
-    width: 8rem;
-}
-*/
-.default-btn:focus, .deathknight-btn:focus, .demonhunter-btn:focus, .druid-btn:focus, .hunter-btn:focus, .mage-btn:focus, .monk-btn:focus, .paladin-btn:focus, .priest-btn:focus, .rogue-btn:focus, .shaman-btn:focus, .warlock-btn:focus, .warrior-btn:focus {
-  outline: 0; }
 
 .deathknight-btn {
   color: #c41f3b; }
@@ -122,6 +154,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #c41f3b;
   border-right: 1px solid #c41f3b;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .demonhunter-btn {
@@ -131,6 +169,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #a330c9;
   border-right: 1px solid #a330c9;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .druid-btn {
@@ -140,6 +184,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #ff7d0a;
   border-right: 1px solid #ff7d0a;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .hunter-btn {
@@ -149,6 +199,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #abd473;
   border-right: 1px solid #abd473;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .mage-btn {
@@ -158,6 +214,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #69ccf0;
   border-right: 1px solid #69ccf0;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .monk-btn {
@@ -167,6 +229,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #00ff96;
   border-right: 1px solid #00ff96;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .paladin-btn {
@@ -176,6 +244,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #f58cba;
   border-right: 1px solid #f58cba;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .priest-btn {
@@ -185,6 +259,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .rogue-btn {
@@ -194,6 +274,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #fff569;
   border-right: 1px solid #fff569;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .shaman-btn {
@@ -203,6 +289,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #0070d3;
   border-right: 1px solid #0070d3;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .warlock-btn {
@@ -212,6 +304,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #9482c9;
   border-right: 1px solid #9482c9;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .warrior-btn {
@@ -221,6 +319,12 @@ ol {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #c79c63;
   border-right: 1px solid #c79c63;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
+  width: 128px;
   width: 8rem; }
 
 .intro {
@@ -235,27 +339,67 @@ ol {
 
 .icons {
   color: #ff033a;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 40px;
   font-size: 2.5rem; }
 
 .navbar-toggler {
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
+  padding: 12px;
   padding: 0.75rem;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 16px;
   font-size: 1rem;
   line-height: 1;
   background: 0 0;
   border: none;
   border-radius: 0;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
+  margin-top: 1.6px;
   margin-top: 0.1rem;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
+  margin-bottom: 1.6px;
   margin-bottom: 0.1rem; }
 
 .navbar-toggler-icon {
   color: #141516;
   height: 1.0em;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
+  margin-right: 16px;
   margin-right: 1rem; }
 
 .img-fluid {
   opacity: 0.80;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-duration: 250ms;
+       -o-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .img-fluid:hover {
   opacity: 1; }
@@ -285,5 +429,4 @@ ol {
 
 .close:focus {
   outline: 0; }
-
 /*# sourceMappingURL=style.css.map */
