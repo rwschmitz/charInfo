@@ -1,19 +1,4 @@
-/* 
-
-Warrior = 0
-Paladin = 1
-Hunter = 2
-Rogue = 3
-Priest = 4
-DeathKnight = 5
-Shaman = 6
-Mage = 7
-Warlock = 8
-Monk = 9
-Druid = 10
-Demon Hunter = 11
-
-*/
+// Warrior = 0, Paladin = 1, Hunter = 2, Rogue = 3, Priest = 4, DeathKnight = 5, Shaman = 6, Mage = 7, Warlock = 8, Monk = 9, Druid = 10, Demon Hunter = 11
 
 const endpoint = 'https://us.api.battle.net/wow/guild/Mal\'Ganis/step%20dad?fields=members&locale=en_US&apikey=c6ksxd9aqueqjtt3m4kxfkgett9k44m2';
 
@@ -45,6 +30,9 @@ var wowClassesArr = [
     [] // demonhunters
 ];
 
+for ( var i = 0; i < wowClasses.length; i++) {
+    wowClasses[i].addEventListener("click", assignClass, false);
+}
 
 function assignClass(e) {
     var target = e.target;
@@ -56,15 +44,8 @@ function assignClass(e) {
     }
 }
 
-for ( var i = 0; i < wowClasses.length; i++) {
-    wowClasses[i].addEventListener("click", assignClass, false);
-} 
+var wowObj = [
 
-
-
-/* var wowObj = [
-
- 
     function () {
         info.filter(function(char) {
             if(char.character.class === 1 && !wowClassesArr[0].includes(char.character.name)) { // deathknights
@@ -270,4 +251,4 @@ for ( var i = 0; i < wowClasses.length; i++) {
             wowClassesRoster[11].style.color = '#a330c9';
         });
     }
-]; */
+];
