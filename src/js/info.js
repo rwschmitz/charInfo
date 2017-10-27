@@ -59,7 +59,7 @@ var wowObj = [
                 }
             });
             wowClassesRoster[0].innerHTML = wowClassesArr[0].join(', ');
-            wowClassesRoster[0].style.color = '#c41f3b';
+            wowClassesRoster[0].style.color = '#c79c63';
         });
     },
 
@@ -76,7 +76,7 @@ var wowObj = [
                 }
             });
             wowClassesRoster[1].innerHTML = wowClassesArr[1].join(', ');
-            wowClassesRoster[1].style.color = '#c41f3b';
+            wowClassesRoster[1].style.color = '#f58cba';
         });
     },
 
