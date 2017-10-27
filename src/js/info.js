@@ -48,7 +48,7 @@ var wowObj = [
 
     function () {
         info.filter(function(char) {
-            if(char.character.class === 1 && !wowClassesArr[0].includes(char.character.name)) { // deathknights
+            if(char.character.class === 1 && !wowClassesArr[0].includes(char.character.name)) { 
                 wowClassesArr[0].push(char.character.name);
             }
             wowClassesArr[0].sort(function(a,b) {
@@ -65,7 +65,7 @@ var wowObj = [
 
     function () {
         info.filter(function(char) {
-            if(char.character.class === 2 && !wowClassesArr[1].includes(char.character.name)) { // deathknights
+            if(char.character.class === 2 && !wowClassesArr[1].includes(char.character.name)) { 
                 wowClassesArr[1].push(char.character.name);
             }
             wowClassesArr[1].sort(function(a,b) {
@@ -83,7 +83,7 @@ var wowObj = [
 
      function() {
         info.filter(function(char) {
-            if(char.character.class == 3 && !wowClassesArr[2].includes(char.character.name)) { // hunters
+            if(char.character.class == 3 && !wowClassesArr[2].includes(char.character.name)) { 
                 wowClassesArr[2].push(char.character.name);
             }
             wowClassesArr[2].sort(function(a,b) {
@@ -101,7 +101,7 @@ var wowObj = [
  
     function() {
         info.filter(function(char) {
-            if(char.character.class == 4 && !wowClassesArr[3].includes(char.character.name)) { // rogues
+            if(char.character.class == 4 && !wowClassesArr[3].includes(char.character.name)) { 
                 wowClassesArr[3].push(char.character.name);
             }
             wowClassesArr[3].sort(function(a,b) {
@@ -118,7 +118,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 5 && !wowClassesArr[4].includes(char.character.name)) { // priests
+            if(char.character.class == 5 && !wowClassesArr[4].includes(char.character.name)) { 
                 wowClassesArr[4].push(char.character.name);
             }
             wowClassesArr[4].sort(function(a,b) {
@@ -135,7 +135,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 6 && !wowClassesArr[5].includes(char.character.name)) { // deathknights
+            if(char.character.class == 6 && !wowClassesArr[5].includes(char.character.name)) { 
                 wowClassesArr[5].push(char.character.name);
             }
             wowClassesArr[5].sort(function(a,b) {
@@ -152,7 +152,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 7 && !wowClassesArr[6].includes(char.character.name)) { // shamans
+            if(char.character.class == 7 && !wowClassesArr[6].includes(char.character.name)) { 
                 wowClassesArr[6].push(char.character.name);
             }
             wowClassesArr[6].sort(function(a,b) {
@@ -169,7 +169,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 8 && !wowClassesArr[7].includes(char.character.name)) { // mages
+            if(char.character.class == 8 && !wowClassesArr[7].includes(char.character.name)) { 
                 wowClassesArr[7].push(char.character.name);
             }
             wowClassesArr[7].sort(function(a,b) {
@@ -186,7 +186,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 9 && !wowClassesArr[8].includes(char.character.name)) { // warlocks
+            if(char.character.class == 9 && !wowClassesArr[8].includes(char.character.name)) { 
                 wowClassesArr[8].push(char.character.name);
             }
             wowClassesArr[8].sort(function(a,b) {
@@ -203,7 +203,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 10 && !wowClassesArr[9].includes(char.character.name)) { // monks
+            if(char.character.class == 10 && !wowClassesArr[9].includes(char.character.name)) { 
                 wowClassesArr[9].push(char.character.name);
             }
             wowClassesArr[9].sort(function(a,b) {
@@ -220,7 +220,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 11 && !wowClassesArr[10].includes(char.character.name)) { // druids
+            if(char.character.class == 11 && !wowClassesArr[10].includes(char.character.name)) { 
                 wowClassesArr[10].push(char.character.name);
             }
             wowClassesArr[10].sort(function(a,b) {
@@ -237,7 +237,7 @@ var wowObj = [
 
     function() {
         info.filter(function(char) {
-            if(char.character.class == 12 && !wowClassesArr[11].includes(char.character.name)) { // demonhunters
+            if(char.character.class == 12 && !wowClassesArr[11].includes(char.character.name)) { 
                 wowClassesArr[11].push(char.character.name);
             }
             wowClassesArr[11].sort(function(a,b) {
